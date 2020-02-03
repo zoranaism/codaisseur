@@ -1,2 +1,94 @@
+// FONT IMPORT
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Martel+Sans&display=swap')
+
+// COLOR PALETTE
+$color-light-background: #b4ffd8
+$color-powder-pink: #DBD3D8
+$color-mild-green: #84dcc6
+$color-indigo: #121645
+$color-dark-green: #2c7b52
+$color-gray: #93A7AB
+
+// FONTS
+@mixin font-big 
+   font-family: "Fredericka the Great", cursive
+   text-transform: uppercase
+   color: $color-indigo
+   font-size: 26px
+
+@mixin font-cont-head
+   text-transform: uppercase
+   font-size: 30px
+   font-family: 'Martel Sans', sans-serif
+   color: $color-gray
+
+@mixin font-small 
+   font-family: 'Martel Sans', sans-serif
+   color: $color-indigo
+   font-size: 18px
+   
+@mixin sticky-background
+   background-repeat: no-repeat, repeat
+   background-attachment: fixed
+   background-size: cover
+   opacity: 0.9
+
+
+// COMMON CSS ELEMENTS
 body 
-   background: red
+   background-color: $color-light-background
+   text-align: center
+   margin: 0
+
+.horisontal-line 
+   height: 60px
+   opacity: 0.7
+   background-color: $color-light-background
+
+.white-bg-trnsp 
+   background-color: white
+   padding: 40px 50px
+
+.container-header
+   @include font-cont-head
+      
+.text
+   @include font-small
+
+.container
+   margin: 0 auto
+   width: 90%
+   padding: 70px 30px
+
+
+// NAVIGATION BAR
+#navigation-bar
+   list-style-type: none
+   margin: 0
+   padding: 0
+   overflow: hidden
+   background-color: $color-light-background
+      
+#navigation-bar li 
+   float: left
+
+#navigation-bar li a 
+   display: block
+   text-align: center
+   padding: 16px
+   text-decoration: none
+   @include font-big
+   
+#navigation-bar li a:hover 
+   background-color: $color-mild-green
+   
+
+// HOME
+.home, .aboutme, .technology, .contact
+   background-image: url("../img/6.jpg")
+   @include sticky-background
+
+
+
+
+
