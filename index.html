@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
+ 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,79 +18,106 @@
    <!-- NAVIGATION -->
    <nav>
       <div>
-         <ul id="navigation-bar">
+         <ol id="navigation-bar">
             <li>
-               <a>Home</a>
+               <a href="#home">Home</a>
             </li>
             <li>
-               <a>About me</a>
+               <a href="#aboutme">About me</a href="#home">
             </li>
             <li>
-               <a>Contact</a>
+               <a href="#contact">Contact</a href="#home">
             </li>
             <li>
-               <a>Technologies</a>
+               <a href="#technology">Technologies</a href="#home">
             </li>
-         </ul>
+         </ol>
       </div>
    </nav>
 
-
-   <!-- HOME -->
-   <div class="home">
-      <div class="container">
-         <div class="white-bg-trnsp">
-            <h2 class="container-header">Home</h2>
+   <div id="content">
+      <!-- HOME -->
+      <section id="home">
+         <div class="container">
+            <img src="img/home-photo.jpeg" alt="Home workspace">
          </div>
-      </div>
-   </div>
+      </section>
 
-   <div class="horisontal-line"></div>
+      <div class="horizontal-line"></div>
 
-   <!-- ABOUT ME -->
-   <div class="aboutme">
-      <div class="container">
-         <div class="white-bg-trnsp">
-            <h2 class="container-header">About me</h2> 
-            <img src="img/profile.jpg" alt="profile pic" style=" width:200px" />
-            <p class="text">Hi everyone. I am Zorana. I am very glad to be here with you to share the learning experience. My plan is to focus better on learning JS through this course. </p>
+      <!-- ABOUT ME -->
+      <section id="aboutme">
+         <div class="container">
+            <div class="white-bg-trnsp">
+               <h2 class="container-header">About me</h2> 
+               <img src="img/profile-photo.jpg" alt="profile pic" style=" width:200px" />
+               <p class="text">Hi everyone, I am Zorana.</p>
+               <p class="text">This is my experimental Porfolio website. What do you think about it? Share your thoughts on a Slack chat.<br> 
+               I am a pianist and music teacher that ended up in Tech field. Worked a bit as a FE Dev, had invested startup, taught Entrepreneurship course sponsored by HERE Technologies, created few NGO projects.<br> 
+               I love yoga, good concert/music and beer are always welcome, watching standup comedy in my free time...<br>
+               My plan is to focus better on learning JS through this course (my JS sucky), land a job and settle here in the Netherlands.</p>
+            </div>
          </div>
-      </div>
-   </div>
+      </section>
 
-   <div class="horisontal-line"></div>
+      <div class="horizontal-line"></div>
 
-   <!-- CONTACT -->
-   <div class="contact">
-      <div class="container">
-         <div class="white-bg-trnsp">
-            <h2 class="container-header">contact</h2>
+      <!-- CONTACT -->
+      <section id="contact">
+         <div class="container">
+            <div class="white-bg-trnsp">
+               <h2 class="container-header">contact</h2>
+               <form action="/action_page.php" id="single-form">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+                  <label for="country">Country</label>
+                  <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                  </select>
+            
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                  <input type="submit" value="Submit">
+               </form>
+            </div>
          </div>
-      </div>
+      </section>
+
+      <div class="horizontal-line"></div>
+
+      <!-- TECHNOLOGY -->
+      <section id="technology">
+         <div class="container">
+            <div class="white-bg-trnsp">
+               <h2 class="container-header">Technology</h2>
+               <img src="img/keyboard.jpg" alt="Keyboard" style="height:200px; width:200px">
+               <p class="text">I am Front End Developer because... </p>
+               <p class="text">Here are some of the technologies I have used here:</p>
+               <p class="text">
+                  SASS <br/>
+                  I really loved VS Code extentions I've discovered like "Bracket Pair Colorizer", "Live Server", "Live Sass Compiler"...<br/>
+                  Ubuntu. This one was a little bit of headache, but I have figured it out. Still getting used to it.<br/>
+                  JS libraries<br/>
+                  I've tried to avoid Bootstrap, Materialize and other libraries, so I could focus on creation JS myself<br/>
+                  Two Google Fonts<br/>
+                  Find my GitHub and this website's code <a href="https://github.com/zoranaism/codaisseur" target="_blank">here</a>.
+               </p>
+            </div>   
+         </div>
+      </section>
+
    </div>
 
-   <div class="horisontal-line"></div>
-
-   <!-- TECHNOLOGY -->
-   <div class="technology">
-      <div class="container">
-         <div class="white-bg-trnsp">
-            <h2 class="container-header">Technology</h2>
-            <img src="img/1.jpg" alt="Keyboard" style="height:200px; width:200px">
-            <p class="text">I really like the animation creation. I think that is a sign I will be a good FE dev with a designers eye. Here are some of the technologies I have used here:</p>
-            <p>
-               SASS <br/>
-               I really loved VS Code extentions I've discovered like "Bracket Pair Colorizer", "Live Server", "Live Sass Compiler"...<br/>
-               Ubuntu. This one was a little bit of headache, but I have figured it out. Still getting used to it.<br/>
-               JS libraries<br/>
-               I've tried to avoid Bootstrap, Materialize and other libraries, so I could focus on creation JS myself<br/>
-               Two Google Fonts<br/>
-            </p>
-         </div>   
-      </div>
-   </div>
 
    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

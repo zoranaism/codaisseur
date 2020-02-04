@@ -1,32 +1,40 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Martel+Sans&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #b4ffd8;
   text-align: center;
   margin: 0;
 }
 
-.horisontal-line {
-  height: 60px;
-  opacity: 0.7;
-  background-color: #b4ffd8;
+.horizontal-line {
+  height: 10px;
+  background-color: #243046;
+  background-image: url("../img/ln-bg.jpg");
+  opacity: 0.5;
 }
 
 .white-bg-trnsp {
-  background-color: white;
   padding: 40px 50px;
+  background-image: url("../img/cont-bg.jpeg");
 }
 
 .container-header {
   text-transform: uppercase;
-  font-size: 30px;
-  font-family: 'Martel Sans', sans-serif;
-  color: #93A7AB;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Fredericka the Great", cursive;
+  color: #4f846c;
 }
 
 .text {
-  font-family: 'Martel Sans', sans-serif;
-  color: #121645;
+  font-family: "Fredericka the Great", cursive;
+  color: #586680;
   font-size: 18px;
+  font-weight: 700;
 }
 
 .container {
@@ -35,16 +43,27 @@ body {
   padding: 70px 30px;
 }
 
+#content {
+  margin-top: 60px;
+  position: absolute;
+}
+
 #navigation-bar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #b4ffd8;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 #navigation-bar li {
   float: left;
+  -webkit-transition: all 50ms ease-in-out;
+  transition: all 50ms ease-in-out;
+  /* 💡 This small transition makes setting of the active state smooth */
 }
 
 #navigation-bar li a {
@@ -54,19 +73,68 @@ body {
   text-decoration: none;
   font-family: "Fredericka the Great", cursive;
   text-transform: uppercase;
-  color: #121645;
+  color: #243046;
   font-size: 26px;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 #navigation-bar li a:hover {
   background-color: #84dcc6;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+  display: block;
 }
 
-.home, .aboutme, .technology, .contact {
-  background-image: url("../img/6.jpg");
+#navigation-bar li a:focus {
+  background-color: #4f846c;
+}
+
+#home, #aboutme, #technology, #contact {
+  background-image: url("../img/bg.jpg");
   background-repeat: no-repeat, repeat;
   background-attachment: fixed;
   background-size: cover;
   opacity: 0.9;
+}
+
+#single-form {
+  width: 500px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#single-form input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: 'Martel Sans', sans-serif;
+}
+
+#single-form label {
+  font-family: "Fredericka the Great", cursive;
+  color: #586680;
+  font-size: 18px;
+  font-weight: 700;
+  font-weight: 300;
+}
+
+#single-form input[type=submit] {
+  background-color: #243046;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#single-form input[type=submit]:hover {
+  background-color: #93A7AB;
 }
 /*# sourceMappingURL=style.css.map */

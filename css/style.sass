@@ -3,13 +3,13 @@
 
 // COLOR PALETTE
 $color-light-background: #b4ffd8
-$color-powder-pink: #DBD3D8
+$color-light-blue: #586680
 $color-mild-green: #84dcc6
-$color-indigo: #121645
-$color-dark-green: #2c7b52
+$color-indigo: #243046
+$color-dark-green: #4f846c
 $color-gray: #93A7AB
 
-// FONTS
+// MIXINS
 @mixin font-big 
    font-family: "Fredericka the Great", cursive
    text-transform: uppercase
@@ -18,14 +18,16 @@ $color-gray: #93A7AB
 
 @mixin font-cont-head
    text-transform: uppercase
-   font-size: 30px
-   font-family: 'Martel Sans', sans-serif
-   color: $color-gray
+   font-size: 40px
+   font-weight: 400
+   font-family: "Fredericka the Great", cursive
+   color: $color-dark-green
 
 @mixin font-small 
-   font-family: 'Martel Sans', sans-serif
-   color: $color-indigo
+   font-family: "Fredericka the Great", cursive
+   color: $color-light-blue
    font-size: 18px
+   font-weight: 700
    
 @mixin sticky-background
    background-repeat: no-repeat, repeat
@@ -34,20 +36,25 @@ $color-gray: #93A7AB
    opacity: 0.9
 
 
+
 // COMMON CSS ELEMENTS
+html 
+	scroll-behavior: smooth;
+
 body 
    background-color: $color-light-background
    text-align: center
    margin: 0
 
-.horisontal-line 
-   height: 60px
-   opacity: 0.7
-   background-color: $color-light-background
+.horizontal-line 
+   height: 10px
+   background-color: $color-indigo
+   background-image: url("../img/ln-bg.jpg")
+   opacity: 0.5
 
 .white-bg-trnsp 
-   background-color: white
    padding: 40px 50px
+   background-image: url("../img/cont-bg.jpeg")
 
 .container-header
    @include font-cont-head
@@ -59,6 +66,11 @@ body
    margin: 0 auto
    width: 90%
    padding: 70px 30px
+   
+#content 
+   margin-top: 60px
+   position: absolute
+
 
 
 // NAVIGATION BAR
@@ -68,9 +80,13 @@ body
    padding: 0
    overflow: hidden
    background-color: $color-light-background
+   position: fixed;
+   z-index: 2;
+   width: 100%
       
 #navigation-bar li 
    float: left
+   transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 
 #navigation-bar li a 
    display: block
@@ -78,17 +94,57 @@ body
    padding: 16px
    text-decoration: none
    @include font-big
+   transition: all 150ms ease-in-out;
    
-#navigation-bar li a:hover 
+#navigation-bar li a:hover
    background-color: $color-mild-green
-   
+   transition: all 150ms ease-in-out; 
+   display: block
 
-// HOME
-.home, .aboutme, .technology, .contact
-   background-image: url("../img/6.jpg")
+#navigation-bar li a:focus
+   background-color: $color-dark-green
+
+
+
+// CONTENT
+#home, #aboutme, #technology, #contact
+   background-image: url("../img/bg.jpg")
    @include sticky-background
 
 
 
+
+
+// FORM
+#single-form
+   width: 500px
+   text-align: left
+   margin: 0 auto
+
+#single-form input[type=text], select, textarea 
+  width: 100%
+  padding: 12px
+  border: 1px solid #ccc
+  border-radius: 4px
+  box-sizing: border-box
+  margin-top: 6px
+  margin-bottom: 16px
+  resize: vertical
+  font-family: 'Martel Sans', sans-serif
+
+#single-form label 
+   @include font-small
+   font-weight: 300
+
+#single-form input[type=submit] 
+   background-color: $color-indigo
+   color: white
+   padding: 12px 20px
+   border: none
+   border-radius: 4px
+   cursor: pointer
+   
+#single-form input[type=submit]:hover 
+  background-color: $color-gray
 
 
