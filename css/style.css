@@ -98,13 +98,13 @@ body {
   opacity: 0.9;
 }
 
-#single-form {
+.single-form {
   width: 500px;
   text-align: left;
   margin: 0 auto;
 }
 
-#single-form input[type=text], select, textarea {
+.single-form input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -117,7 +117,7 @@ body {
   font-family: 'Martel Sans', sans-serif;
 }
 
-#single-form label {
+.single-form label {
   font-family: "Fredericka the Great", cursive;
   color: #586680;
   font-size: 18px;
@@ -125,7 +125,7 @@ body {
   font-weight: 300;
 }
 
-#single-form input[type=submit] {
+.single-form input[type=submit] {
   background-color: #243046;
   color: white;
   padding: 12px 20px;
@@ -134,7 +134,7 @@ body {
   cursor: pointer;
 }
 
-#single-form input[type=submit]:hover {
+.single-form input[type=submit]:hover {
   background-color: #93A7AB;
 }
 /*# sourceMappingURL=style.css.map */

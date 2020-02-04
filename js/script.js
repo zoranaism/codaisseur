@@ -17,3 +17,24 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	
 });
+
+
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const country = document.getElementById('country');
+const subject = document.getElementById('subject');
+const formJs = document.getElementById('formJs');
+const errorElement = document.getElementById('error');
+
+form addEventListener('submit', (e) => {
+   let messages = []
+   if (name.value === '' || name.value == null) {
+      messages.push('Name is required');
+   }
+
+   if (messages.length > 0) {
+      e.preventDefault();
+      errorElement.innerText = messages.join(', ');
+   }
+   
+});
