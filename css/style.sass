@@ -9,9 +9,13 @@ $color-indigo: #243046
 $color-dark-green: #4f846c
 $color-gray: #93A7AB
 
+// FONTS 
+$font-fredericka: "Fredericka the Great", cursive
+$font-martel: 'Martel Sans', sans-serif
+
 // MIXINS
 @mixin font-big 
-   font-family: "Fredericka the Great", cursive
+   font-family: $font-fredericka
    text-transform: uppercase
    color: $color-indigo
    font-size: 26px
@@ -20,14 +24,14 @@ $color-gray: #93A7AB
    text-transform: uppercase
    font-size: 40px
    font-weight: 400
-   font-family: "Fredericka the Great", cursive
+   font-family: $font-fredericka
    color: $color-dark-green
 
 @mixin font-small 
-   font-family: "Fredericka the Great", cursive
-   color: $color-light-blue
+   font-family: $font-fredericka
+   color: $color-indigo
    font-size: 18px
-   font-weight: 700
+   font-weight: 400
    
 @mixin sticky-background
    background-repeat: no-repeat, repeat
@@ -35,6 +39,15 @@ $color-gray: #93A7AB
    background-size: cover
    opacity: 0.9
 
+@mixin button
+   background-color: $color-indigo
+   color: white
+   padding: 12px 20px
+   border: none
+   border-radius: 4px
+   cursor: pointer
+   outline: none
+   font-weight: 700
 
 
 // COMMON CSS ELEMENTS
@@ -54,7 +67,7 @@ body
 
 .white-bg-trnsp 
    padding: 40px 50px
-   background-image: url("../img/cont-bg.jpeg")
+   background: white
 
 .container-header
    @include font-cont-head
@@ -74,7 +87,7 @@ body
 
 
 // NAVIGATION BAR
-#navigation-bar
+#navigation
    list-style-type: none
    margin: 0
    padding: 0
@@ -84,25 +97,21 @@ body
    z-index: 2;
    width: 100%
       
-#navigation-bar li 
+#navigation li 
    float: left
    transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 
-#navigation-bar li a 
+#navigation li a 
    display: block
    text-align: center
    padding: 16px
    text-decoration: none
    @include font-big
-   transition: all 150ms ease-in-out;
+   transition: all 200ms ease-in-out;
    
-#navigation-bar li a:hover
+#navigation li a:hover, #navigation li.active a
    background-color: $color-mild-green
-   transition: all 150ms ease-in-out; 
    display: block
-
-#navigation-bar li a:focus
-   background-color: $color-dark-green
 
 
 
@@ -121,7 +130,7 @@ body
    text-align: left
    margin: 0 auto
 
-.single-form input[type=text], select, textarea 
+.single-form input[type=text], input[type=email], textarea 
   width: 100%
   padding: 12px
   border: 1px solid #ccc
@@ -130,21 +139,46 @@ body
   margin-top: 6px
   margin-bottom: 16px
   resize: vertical
-  font-family: 'Martel Sans', sans-serif
+  font-family: $font-martel
 
 .single-form label 
    @include font-small
    font-weight: 300
 
 .single-form input[type=submit] 
-   background-color: $color-indigo
-   color: white
-   padding: 12px 20px
-   border: none
-   border-radius: 4px
-   cursor: pointer
+   @include button
    
 .single-form input[type=submit]:hover 
   background-color: $color-gray
 
+#error
+   color: red;
+   padding: 13px 0;
+   margin: 15px 0;
+   text-align: center
+   font-family: $font-fredericka
 
+
+
+// QUOTE PART
+#quote-holder 
+   border-radius: 5px
+   background-color: $color-mild-green
+   padding: 10px
+   width: 300px
+   margin: 0 auto
+
+#quote-header
+   font-family: $font-martel
+   color: $color-dark-green
+
+#quoteBtn 
+   @include button
+
+#quoteBtn:hover 
+  background-color: $color-gray
+
+blockquote
+   border-left: 5px solid $color-gray
+   padding-left: 10px
+   margin: 10px;

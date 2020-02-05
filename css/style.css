@@ -19,7 +19,7 @@ body {
 
 .white-bg-trnsp {
   padding: 40px 50px;
-  background-image: url("../img/cont-bg.jpeg");
+  background: white;
 }
 
 .container-header {
@@ -32,9 +32,9 @@ body {
 
 .text {
   font-family: "Fredericka the Great", cursive;
-  color: #586680;
+  color: #243046;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .container {
@@ -48,7 +48,7 @@ body {
   position: absolute;
 }
 
-#navigation-bar {
+#navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -59,14 +59,14 @@ body {
   width: 100%;
 }
 
-#navigation-bar li {
+#navigation li {
   float: left;
   -webkit-transition: all 50ms ease-in-out;
   transition: all 50ms ease-in-out;
   /* 💡 This small transition makes setting of the active state smooth */
 }
 
-#navigation-bar li a {
+#navigation li a {
   display: block;
   text-align: center;
   padding: 16px;
@@ -75,19 +75,13 @@ body {
   text-transform: uppercase;
   color: #243046;
   font-size: 26px;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
-#navigation-bar li a:hover {
+#navigation li a:hover, #navigation li.active a {
   background-color: #84dcc6;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
   display: block;
-}
-
-#navigation-bar li a:focus {
-  background-color: #4f846c;
 }
 
 #home, #aboutme, #technology, #contact {
@@ -104,7 +98,7 @@ body {
   margin: 0 auto;
 }
 
-.single-form input[type=text], select, textarea {
+.single-form input[type=text], input[type=email], textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -114,14 +108,14 @@ body {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  font-family: 'Martel Sans', sans-serif;
+  font-family: "Martel Sans", sans-serif;
 }
 
 .single-form label {
   font-family: "Fredericka the Great", cursive;
-  color: #586680;
+  color: #243046;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   font-weight: 300;
 }
 
@@ -132,9 +126,53 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
+  font-weight: 700;
 }
 
 .single-form input[type=submit]:hover {
   background-color: #93A7AB;
+}
+
+#error {
+  color: red;
+  padding: 13px 0;
+  margin: 15px 0;
+  text-align: center;
+  font-family: "Fredericka the Great", cursive;
+}
+
+#quote-holder {
+  border-radius: 5px;
+  background-color: #84dcc6;
+  padding: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+#quote-header {
+  font-family: "Martel Sans", sans-serif;
+  color: #4f846c;
+}
+
+#quoteBtn {
+  background-color: #243046;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+}
+
+#quoteBtn:hover {
+  background-color: #93A7AB;
+}
+
+blockquote {
+  border-left: 5px solid #93A7AB;
+  padding-left: 10px;
+  margin: 10px;
 }
 /*# sourceMappingURL=style.css.map */

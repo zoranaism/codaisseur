@@ -18,8 +18,8 @@
    <!-- NAVIGATION -->
    <nav>
       <div>
-         <ol id="navigation-bar">
-            <li>
+         <ol id="navigation">
+            <li class="active">
                <a href="#home">Home</a>
             </li>
             <li>
@@ -29,7 +29,7 @@
                <a href="#contact">Contact</a href="#home">
             </li>
             <li>
-               <a href="#technology">Technologies</a href="#home">
+               <a href="#technology">Technology</a href="#home">
             </li>
          </ol>
       </div>
@@ -39,7 +39,7 @@
       <!-- HOME -->
       <section id="home">
          <div class="container">
-            <img src="img/home-photo.jpeg" alt="Home workspace">
+            
          </div>
       </section>
 
@@ -53,9 +53,9 @@
                <img src="img/profile-photo.jpg" alt="profile pic" style=" width:200px" />
                <p class="text">Hi everyone, I am Zorana.</p>
                <p class="text">This is my experimental Porfolio website. What do you think about it? Share your thoughts on a Slack chat.<br> 
-               I am a pianist and music teacher that ended up in Tech field. Worked a bit as a FE Dev, had invested startup, taught Entrepreneurship course sponsored by HERE Technologies, created few NGO projects.<br> 
-               I love yoga, good concert/music and beer are always welcome, watching standup comedy in my free time...<br>
-               My plan is to focus better on learning JS through this course (my JS sucky), land a job and settle here in the Netherlands.</p>
+               My experience is diverse: Worked a bit as a FE Dev, had startup investment, taught Entrepreneurship course sponsored by HERE Technologies, created few NGO projects. I am basically a musician that ended up in Tech world.<br> 
+               My hobbies are yoga, attending good concerts, watching standup comedy, traveling and exploring new places, playing piano.<br>
+               My plan is to focus better on learning JS through this course, land a job and settle here in Den Bosch, Netherlands.</p>
             </div>
          </div>
       </section>
@@ -68,25 +68,24 @@
             <div class="white-bg-trnsp">
                <h2 class="container-header">contact</h2>
                <p class="text">Have any questions? Send it via mail. </p>
-               <form action="" class="single-form" id="formJs">
-                  <label for="fname">First Name</label>
+               
+               <form action="https://formspree.io/xwkobrbr" method="POST" class="single-form" id="formJs">
+
+                  <div id="error"></div>
+
+                  <label for="fname">Name</label>
                   <input type="text" id="fname" name="firstname" placeholder="Your name..">
             
-                  <label for="lname">Last Name</label>
-                  <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            
-                  <label for="country">Country</label>
-                  <select id="country" name="country">
-                  <option value="australia">Australia</option>
-                  <option value="canada">Canada</option>
-                  <option value="usa">USA</option>
-                  </select>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Your email..">
             
                   <label for="subject">Subject</label>
                   <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
             
                   <input type="submit" value="Submit">
+
                </form>
+
             </div>
          </div>
       </section>
@@ -99,25 +98,36 @@
             <div class="white-bg-trnsp">
                <h2 class="container-header">Technology</h2>
                <img src="img/keyboard.jpg" alt="Keyboard" style="height:200px; width:200px">
-               <p class="text">I am Front End Developer because... </p>
-               <p class="text">Here are some of the technologies I have used here:</p>
+               <p class="text">I am Front End Developer because I like animations. </p>
+               <p class="text">Here are some of the technologies I've discovered or just used here:</p>
                <p class="text">
                   SASS <br/>
-                  I really loved VS Code extentions I've discovered like "Bracket Pair Colorizer", "Live Server", "Live Sass Compiler"...<br/>
-                  Ubuntu. This one was a little bit of headache, but I have figured it out. Still getting used to it.<br/>
-                  JS libraries<br/>
-                  I've tried to avoid Bootstrap, Materialize and other libraries, so I could focus on creation JS myself<br/>
+                  As new to VS Code, I really loved extentions like "Bracket Pair Colorizer", "Live Server", "Live Sass Compiler"...<br/>
+                  Ubuntu. This one was a little bit of headache. Still getting used to it.<br/>
+                  Libraries like formspree.io (form backend, API and email service for HTML forms), <br/>
+                  I've tried to avoid Bootstrap, Materialize and other frameworks, so I could focus on JS.<br/>
                   Two Google Fonts<br/>
-                  Find my GitHub and this website's code <a href="https://github.com/zoranaism/codaisseur" target="_blank">here</a>.
+                  Find this website's code on my GitHub <a href="https://github.com/zoranaism/codaisseur" target="_blank">here</a>.
                </p>
+
+               <div id="quote-holder">
+                  <h3 id="quote-header">Quotes by famous people</h3>
+                  <button type="button" id="quoteBtn">Press to display a quote</button>
+                  <blockquote>
+                     <p class="text" id="quote"></p>
+                  </blockquote>
+                  <p class="text" id="quoteAuthor"></p>
+               </div>
+               
+
             </div>   
          </div>
       </section>
 
    </div>
 
-
-   <script src="js/script.js"></script>
+   <script src="js/jquery-3.4.1.js"></script>
+   <script src="js/scripts.js"></script>
 
 </body>
 
