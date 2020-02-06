@@ -175,4 +175,25 @@ blockquote {
   padding-left: 10px;
   margin: 10px;
 }
+
+.blue-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+}
+
+.square {
+  margin: 0 10px;
+  height: 100px;
+  width: 100px;
+  background-color: deepskyblue;
+}
 /*# sourceMappingURL=style.css.map */
