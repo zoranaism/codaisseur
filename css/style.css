@@ -19,7 +19,7 @@ body {
 
 .white-bg-trnsp {
   padding: 40px 50px;
-  background: white;
+  background: #edf1ef;
   background-repeat: repeat repeat;
   background-size: cover;
 }
@@ -119,6 +119,27 @@ body {
   height: 500px;
   background: url("../img/2.jpeg") no-repeat top center scroll;
   background-size: cover;
+}
+
+#home-hdr {
+  padding-top: 250px;
+}
+
+#home-hdr-1, #home-hdr-2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "Fredericka the Great", cursive;
+}
+
+#home-hdr-1 {
+  color: #021529;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+#home-hdr-2 {
+  color: #153e2b;
+  font-size: 26px;
 }
 
 .single-form {
