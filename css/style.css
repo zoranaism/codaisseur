@@ -12,7 +12,7 @@ body {
 
 .horizontal-line {
   height: 10px;
-  background-color: #243046;
+  background-color: #464e56;
   background-image: url("../img/ln-bg.jpg");
   opacity: 0.5;
 }
@@ -20,6 +20,8 @@ body {
 .white-bg-trnsp {
   padding: 40px 50px;
   background: white;
+  background-repeat: repeat repeat;
+  background-size: cover;
 }
 
 .container-header {
@@ -27,14 +29,14 @@ body {
   font-size: 40px;
   font-weight: 400;
   font-family: "Fredericka the Great", cursive;
-  color: #4f846c;
+  color: #153e2b;
 }
 
 .text {
   font-family: "Fredericka the Great", cursive;
-  color: #243046;
+  color: #464e56;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .container {
@@ -73,7 +75,7 @@ body {
   text-decoration: none;
   font-family: "Fredericka the Great", cursive;
   text-transform: uppercase;
-  color: #243046;
+  color: #464e56;
   font-size: 26px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -90,6 +92,49 @@ body {
   background-attachment: fixed;
   background-size: cover;
   opacity: 0.9;
+}
+
+#tech-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-left {
+  float: left;
+  width: 70%;
+  display: inline-block;
+  padding-right: 30px;
+  text-align: justify;
+}
+
+.content-right {
+  float: right;
+  width: 30%;
+  display: inline-block;
+}
+
+#cta {
+  background-color: #464e56;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+}
+
+#cta:hover {
+  background-color: #93A7AB;
+}
+
+#home-hdr {
+  font-family: "Fredericka the Great", cursive;
+  text-transform: uppercase;
+  color: #84dcc6;
+  font-weight: 300;
+  font-size: 45px;
 }
 
 .single-form {
@@ -113,14 +158,13 @@ body {
 
 .single-form label {
   font-family: "Fredericka the Great", cursive;
-  color: #243046;
+  color: #464e56;
   font-size: 18px;
-  font-weight: 400;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .single-form input[type=submit] {
-  background-color: #243046;
+  background-color: #464e56;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -146,17 +190,17 @@ body {
   border-radius: 5px;
   background-color: #84dcc6;
   padding: 10px;
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
 }
 
 #quote-header {
   font-family: "Martel Sans", sans-serif;
-  color: #4f846c;
+  color: #153e2b;
 }
 
 #quoteBtn {
-  background-color: #243046;
+  background-color: #464e56;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -174,26 +218,5 @@ blockquote {
   border-left: 5px solid #93A7AB;
   padding-left: 10px;
   margin: 10px;
-}
-
-.blue-container {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: white;
-}
-
-.square {
-  margin: 0 10px;
-  height: 100px;
-  width: 100px;
-  background-color: deepskyblue;
 }
 /*# sourceMappingURL=style.css.map */

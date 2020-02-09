@@ -39,7 +39,15 @@
       <!-- HOME -->
       <section id="home">
          <div class="container">
-            
+            <div class="home-bkgr">
+               <h1 id="home-hdr">while(!(succeed = try()));</h1>
+               <button id="cta">watch here</button>
+
+               <div class="panel"></div>
+               <img src="img/other/10.jpg" alt="random pick" style="height:200px; width:200px;" >
+               <p class="text">Talk is cheap. Show me the code.</p>
+               <div class="box"></div>
+            </div>
          </div>
       </section>
 
@@ -97,36 +105,46 @@
          <div class="container">
             <div class="white-bg-trnsp">
                <h2 class="container-header">Technology</h2>
-               <img src="img/keyboard.jpg" alt="Keyboard" style="height:200px; width:200px">
-               <p class="text">I am Front End Developer because I like animations. </p>
-               <p class="text">Here are some of the technologies I've discovered or just used here:</p>
-               <p class="text">
-                  SASS <br/>
-                  As new to VS Code, I really loved extentions like "Bracket Pair Colorizer", "Live Server", "Live Sass Compiler"...<br/>
-                  Ubuntu. This one was a little bit of headache. Still getting used to it.<br/>
-                  Libraries like formspree.io (form backend, API and email service for HTML forms) and GSAP for animation<br/>
-                  NPM is my package manager<br/>
-                  I've tried to avoid Bootstrap, Materialize and other frameworks, so I could focus on JS.<br/>
-                  Two Google Fonts<br/>
-                  Find this website's code on my GitHub <a href="https://github.com/zoranaism/codaisseur" target="_blank">here</a>.
-               </p>
+               <img src="img/keyboard.jpg" alt="Keyboard" style="height:200px; width:200px;display: block; margin: 0 auto;">
 
-               <div id="quote-holder">
-                  <h3 id="quote-header">Quotes by famous people</h3>
-                  <button type="button" id="quoteBtn">Press to display a quote</button>
-                  <blockquote>
-                     <p class="text" id="quote"></p>
-                  </blockquote>
-                  <p class="text" id="quoteAuthor"></p>
+               <div id="tech-content">
+                  
+                  <div class="content-left">                  
+                     <p class="text">I am Front End Developer because I like animations. </p>
+                     <p class="text">Here are some of the technologies I've discovered or just used here:</p>
+                     <p class="text">
+                        SASS <br/>
+                        As new to VS Code, I really loved extentions like "Bracket Pair Colorizer", "Live Server", "Live Sass Compiler"...<br/>
+                        Ubuntu. This one was a little bit of headache. Still getting used to it.<br/>
+                        Libraries like formspree.io (form backend, API and email service for HTML forms) and GSAP for animation<br/>
+                        NPM is my package manager<br/>
+                        I've tried to avoid Bootstrap, Materialize and other frameworks, so I could focus on JS.<br/>
+                        Two Google Fonts<br/>
+                        Find this website's code on my GitHub <a href="https://github.com/zoranaism/codaisseur" target="_blank">here</a>.
+                     </p>
+                  </div>
+                  <div class="content-right">
+                     <div id="quote-holder">
+                        <h3 id="quote-header">Quotes by famous people</h3>
+                        <button type="button" id="quoteBtn">Press to display a quote</button>
+                        <blockquote>
+                           <p class="text" id="quote"></p>
+                        </blockquote>
+                        <p class="text" id="quoteAuthor"></p>
+                     </div>
+                  </div>
+
                </div>
                
-
             </div>   
          </div>
       </section>
 
    </div>
+
+   
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+   <script src="js/gsap.min.js"></script>
    <script src="js/jquery-3.4.1.js"></script>
    <script src="js/scripts.js"></script>
 

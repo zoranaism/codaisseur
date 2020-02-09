@@ -5,8 +5,8 @@
 $color-light-background: #b4ffd8
 $color-light-blue: #586680
 $color-mild-green: #84dcc6
-$color-indigo: #243046
-$color-dark-green: #4f846c
+$color-indigo:#021529
+$color-dark-green: #153e2b
 $color-gray: #93A7AB
 
 // FONTS 
@@ -31,7 +31,7 @@ $font-martel: 'Martel Sans', sans-serif
    font-family: $font-fredericka
    color: $color-indigo
    font-size: 18px
-   font-weight: 400
+   font-weight: 500
    
 @mixin sticky-background
    background-repeat: no-repeat, repeat
@@ -68,6 +68,9 @@ body
 .white-bg-trnsp 
    padding: 40px 50px
    background: white
+   // background-image: url("../img/other/6.jpg")
+   background-repeat: repeat repeat
+   background-size: cover
 
 .container-header
    @include font-cont-head
@@ -120,7 +123,58 @@ body
    background-image: url("../img/bg.jpg")
    @include sticky-background
 
+#tech-content
+   display: flex
 
+.content-left 
+   float: left
+   width: 70%
+   display: inline-block
+   padding-right: 30px
+   text-align: justify
+
+.content-right
+   float: right
+   width: 30%
+   display: inline-block
+
+.home-bkgr
+   width: 100%
+   height: auto
+   position: relative
+   background-color: white
+   
+
+#cta
+   @include button
+   
+#cta:hover 
+  background-color: $color-gray
+
+#home-hdr
+   font-family: $font-fredericka
+   text-transform: uppercase
+   color: $color-mild-green
+   font-weight: 300
+   font-size: 45px
+   -webkit-text-stroke: 1px $color-indigo
+   -webkit-text-stroke-width: 1px
+   -webkit-text-stroke-color: $color-indigo
+   -webkit-text-stroke: 1px $color-indigo
+   -webkit-text-fill-color: $color-mild-green
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+
+.panel
+   position: absolute
+   box-sizing: border-box
+   background: $color-gray
+   right: 0
+   bottom: 0
+   width 55%
+   padding: 15% 7%
+   // transform: scaleY(0)
+   // transform-origin: bottom
+   
 
 
 
@@ -143,7 +197,6 @@ body
 
 .single-form label 
    @include font-small
-   font-weight: 300
 
 .single-form input[type=submit] 
    @include button
@@ -165,7 +218,7 @@ body
    border-radius: 5px
    background-color: $color-mild-green
    padding: 10px
-   width: 300px
+   width: 100%
    margin: 0 auto
 
 #quote-header
@@ -186,16 +239,3 @@ blockquote
 
 
 
-
-.blue-container
-   height: 100vh
-   display: flex
-   justify-content: center
-   align-items: center
-   background-color: white
-
-.square
-   margin: 0 10px
-   height: 100px
-   width: 100px
-   background-color: deepskyblue
