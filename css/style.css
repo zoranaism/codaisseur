@@ -12,7 +12,7 @@ body {
 
 .horizontal-line {
   height: 10px;
-  background-color: #464e56;
+  background-color: #021529;
   background-image: url("../img/ln-bg.jpg");
   opacity: 0.5;
 }
@@ -34,7 +34,7 @@ body {
 
 .text {
   font-family: "Fredericka the Great", cursive;
-  color: #464e56;
+  color: #021529;
   font-size: 18px;
   font-weight: 500;
 }
@@ -75,7 +75,7 @@ body {
   text-decoration: none;
   font-family: "Fredericka the Great", cursive;
   text-transform: uppercase;
-  color: #464e56;
+  color: #021529;
   font-size: 26px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -114,27 +114,11 @@ body {
   display: inline-block;
 }
 
-#cta {
-  background-color: #464e56;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-  font-weight: 700;
-}
-
-#cta:hover {
-  background-color: #93A7AB;
-}
-
-#home-hdr {
-  font-family: "Fredericka the Great", cursive;
-  text-transform: uppercase;
-  color: #84dcc6;
-  font-weight: 300;
-  font-size: 45px;
+#home-cont {
+  background-image: url("../img/2.jpeg");
+  height: 500px;
+  background: url("../img/2.jpeg") no-repeat top center scroll;
+  background-size: cover;
 }
 
 .single-form {
@@ -158,13 +142,13 @@ body {
 
 .single-form label {
   font-family: "Fredericka the Great", cursive;
-  color: #464e56;
+  color: #021529;
   font-size: 18px;
   font-weight: 500;
 }
 
 .single-form input[type=submit] {
-  background-color: #464e56;
+  background-color: #021529;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -200,7 +184,7 @@ body {
 }
 
 #quoteBtn {
-  background-color: #464e56;
+  background-color: #021529;
   color: white;
   padding: 12px 20px;
   border: none;

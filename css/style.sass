@@ -5,7 +5,7 @@
 $color-light-background: #b4ffd8
 $color-light-blue: #586680
 $color-mild-green: #84dcc6
-$color-indigo:#021529
+$color-indigo: #021529
 $color-dark-green: #153e2b
 $color-gray: #93A7AB
 
@@ -138,44 +138,22 @@ body
    width: 30%
    display: inline-block
 
-.home-bkgr
-   width: 100%
-   height: auto
-   position: relative
-   background-color: white
-   
-
-#cta
-   @include button
-   
-#cta:hover 
-  background-color: $color-gray
+#home-cont
+   background-image: url("../img/2.jpeg")
+   height: 500px
+   background: url('../img/2.jpeg') no-repeat top center scroll; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
 
 #home-hdr
-   font-family: $font-fredericka
-   text-transform: uppercase
-   color: $color-mild-green
-   font-weight: 300
-   font-size: 45px
-   -webkit-text-stroke: 1px $color-indigo
-   -webkit-text-stroke-width: 1px
-   -webkit-text-stroke-color: $color-indigo
-   -webkit-text-stroke: 1px $color-indigo
-   -webkit-text-fill-color: $color-mild-green
-   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
-
-.panel
-   position: absolute
-   box-sizing: border-box
-   background: $color-gray
-   right: 0
-   bottom: 0
-   width 55%
-   padding: 15% 7%
-   // transform: scaleY(0)
-   // transform-origin: bottom
    
 
+#home-hdr-1
+
+
+#home-hdr-2
 
 
 // FORM
